@@ -3,6 +3,16 @@
   "collection": "@nestjs/schematics",
   "sourceRoot": "src",
   "compilerOptions": {
-    "deleteOutDir": true
+    "deleteOutDir": true,
+    "assets": [
+      {
+        "include": "templates/**/*",
+        "outDir": "dist"
+      },
+      {
+        "include": "scripts/**/*",
+        "outDir": "dist"
+      }
+    ]
   }
 }
