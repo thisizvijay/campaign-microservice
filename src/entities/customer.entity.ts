@@ -4,6 +4,7 @@ import {
     Column,
     CreateDateColumn,
     UpdateDateColumn,
+    Index,
   } from 'typeorm';
   
   @Entity()
@@ -22,7 +23,8 @@ import {
   
     @Column({ nullable: true, select: false, })
     password: string;
-  
+    
+    @Index()
     @Column({ nullable: false })
     birthDate: Date;
   

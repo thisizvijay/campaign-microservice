@@ -29,8 +29,11 @@ export class CampaignEmail {
   @Column()
   subject: string;
 
-  @Column('text')
+  @Column({ type: 'text', nullable: true })
   emailContent: string;
+
+  @Column({ nullable: true })
+  emailContentKey: string;
 
   @Column({ nullable: true })
   sentAt: Date;
